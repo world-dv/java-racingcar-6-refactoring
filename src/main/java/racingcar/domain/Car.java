@@ -5,7 +5,7 @@ import racingcar.exception.ExceptionMessage;
 public class Car {
 
     private final String carName;
-    private final Long advance;
+    private Long advance;
 
     public Car(String carName, Long advance) {
         if (checkCarName5Limit(carName)) {
@@ -17,6 +17,10 @@ public class Car {
 
     public boolean checkCarName5Limit(String carName) {
         return carName == null || carName.length() > 5;
+    }
+
+    public void addAdvance() {
+        this.advance = advance + 1;
     }
 
     public String getCarName() {

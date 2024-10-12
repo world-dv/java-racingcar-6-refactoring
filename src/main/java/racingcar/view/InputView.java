@@ -1,8 +1,6 @@
 package racingcar.view;
 
 import camp.nextstep.edu.missionutils.Console;
-import racingcar.domain.Car;
-import racingcar.util.MoveCar;
 
 import java.util.HashSet;
 import java.util.List;

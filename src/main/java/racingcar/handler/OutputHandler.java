@@ -1,6 +1,6 @@
 package racingcar.handler;
 
-import racingcar.util.MoveCar;
+import racingcar.domain.Car;
 import racingcar.view.OutputView;
 import racingcar.view.PrintMessage;
 
@@ -24,8 +24,8 @@ public class OutputHandler {
         OutputView.printMessageOneLine(PrintMessage.WINNER_MESSAGE);
     }
 
-    public static String printCarMove(MoveCar moveCar) {
-        return "-".repeat(moveCar.getCarAdvance());
+    public static String printCarMove(Car moveCar) {
+        return "-".repeat(moveCar.getAdvance());
     }
 
     public static String printCarRaceWinner(LinkedHashSet<String> carNames) {
@@ -36,11 +36,11 @@ public class OutputHandler {
         OutputView.print(printCarRaceWinner(carNames));
     }
 
-    public static String printCarMoveResult(MoveCar moveCar) {
+    public static String printCarMoveResult(Car moveCar) {
         return String.format("%s : %s", moveCar.getCarName(), printCarMove(moveCar));
     }
 
-    public static void printCarRaceResult(MoveCar moveCar) {
+    public static void printCarRaceResult(Car moveCar) {
         OutputView.print(printCarMoveResult(moveCar));
     }
 

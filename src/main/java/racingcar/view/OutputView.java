@@ -6,6 +6,10 @@ public class OutputView {
         System.out.println(message);
     }
 
+    public static void printOneLine(String message) {
+        System.out.print(message);
+    }
+
     public static void printSpace() {
         System.out.println();
     }

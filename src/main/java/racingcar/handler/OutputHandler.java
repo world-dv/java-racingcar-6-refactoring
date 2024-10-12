@@ -33,4 +33,8 @@ public class OutputHandler {
     public static void printCarRaceResult(MoveCar moveCar) {
         OutputView.print(printCarMoveResult(moveCar));
     }
+
+    public static void printLineSpace() {
+        OutputView.printSpace();
+    }
 }

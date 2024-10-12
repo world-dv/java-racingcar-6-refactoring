@@ -1,6 +1,7 @@
 package racingcar.util;
 
 import racingcar.domain.Car;
+import racingcar.handler.OutputHandler;
 
 public class MoveCar {
 
@@ -14,6 +15,7 @@ public class MoveCar {
         if (MakeMove.checkMoveOrStop()) {
             car.addAdvance();
         }
+        OutputHandler.printCarRaceResult(car);
     }
 
     public String getCarName() {

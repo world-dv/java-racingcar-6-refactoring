@@ -4,6 +4,8 @@ import racingcar.util.MoveCar;
 import racingcar.view.OutputView;
 import racingcar.view.PrintMessage;
 
+import java.util.LinkedHashSet;
+
 public class OutputHandler {
 
     public static void printCarNameInput() {
@@ -19,11 +21,19 @@ public class OutputHandler {
     }
 
     public static void printWinner() {
-        OutputView.printMessage(PrintMessage.WINNER_MESSAGE);
+        OutputView.printMessageOneLine(PrintMessage.WINNER_MESSAGE);
     }
 
     public static String printCarMove(MoveCar moveCar) {
         return "-".repeat(moveCar.getCarAdvance());
+    }
+
+    public static String printCarRaceWinner(LinkedHashSet<String> carNames) {
+        return carNames.toString().replaceAll("[\\['\\]]", "");
+    }
+
+    public static void printCarRaceWinnerList(LinkedHashSet<String> carNames) {
+        OutputView.print(printCarRaceWinner(carNames));
     }
 
     public static String printCarMoveResult(MoveCar moveCar) {

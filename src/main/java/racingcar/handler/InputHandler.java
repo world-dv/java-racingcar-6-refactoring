@@ -3,14 +3,13 @@ package racingcar.handler;
 import racingcar.util.MoveCar;
 import racingcar.view.InputView;
 
-import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
 
 public class InputHandler {
 
-    public static HashSet<String> inputCars() {
-        return new HashSet<>(trimCarName());
+    public static LinkedHashSet<String> inputCars() {
+        return new LinkedHashSet<>(trimCarName());
     }
 
     public static List<String> trimCarName() {

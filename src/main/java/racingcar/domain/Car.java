@@ -5,14 +5,14 @@ import racingcar.exception.ExceptionMessage;
 public class Car {
 
     private final String carName;
-    private final Long tryCount;
+    private final Long advance;
 
-    public Car(String carName, Long tryCount) {
+    public Car(String carName, Long advance) {
         if (checkCarName5Limit()) {
             throw new IllegalArgumentException(ExceptionMessage.CAR_NAME_EXCEPTION.getMessage());
         }
         this.carName = carName;
-        this.tryCount = tryCount;
+        this.advance = advance;
     }
 
     public boolean checkCarName5Limit() {
@@ -23,7 +23,7 @@ public class Car {
         return carName;
     }
 
-    public Long getTryCount() {
-        return tryCount;
+    public Long getAdvance() {
+        return advance;
     }
 }

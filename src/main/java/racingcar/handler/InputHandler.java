@@ -1,5 +1,6 @@
 package racingcar.handler;
 
+import racingcar.exception.InputException;
 import racingcar.util.MoveCar;
 import racingcar.view.InputView;
 
@@ -33,6 +34,6 @@ public class InputHandler {
     }
 
     public static Integer makeMove() {
-        return makeMoveToInteger(InputView.input());
+        return InputException.catchNumericException(InputView.input());
     }
 }

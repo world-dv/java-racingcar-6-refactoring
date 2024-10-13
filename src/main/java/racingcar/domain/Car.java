@@ -1,6 +1,7 @@
 package racingcar.domain;
 
 import racingcar.exception.ExceptionMessage;
+import racingcar.exception.InputException;
 import racingcar.util.Number;
 
 public class Car {
@@ -10,10 +11,10 @@ public class Car {
 
     public Car(String carName) {
         if (checkCarName5Limit(carName)) {
-            throw new IllegalArgumentException(ExceptionMessage.CAR_NAME_EXCEPTION.getMessage());
+            InputException.throwException(ExceptionMessage.CAR_NAME_EXCEPTION);
         }
         if (checkCarNameContainExtraChar(carName)) {
-            throw new IllegalArgumentException(ExceptionMessage.CAR_INPUT_EXCEPTION.getMessage());
+            InputException.throwException(ExceptionMessage.CAR_INPUT_EXCEPTION);
         }
 
         this.carName = carName;

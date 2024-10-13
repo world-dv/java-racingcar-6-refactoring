@@ -1,6 +1,7 @@
 package racingcar.handler;
 
 import racingcar.util.MoveCar;
+import racingcar.util.Number;
 
 import java.util.LinkedHashSet;
 
@@ -13,7 +14,7 @@ public class CarRaceHandler {
     public CarRaceHandler(LinkedHashSet<MoveCar> moveCars) {
         this.winners = new LinkedHashSet<>();
         this.moveCars = moveCars;
-        this.winnerAdvance = 0;
+        this.winnerAdvance = Number.magicNumber(Number.ZERO);
     }
 
     public void makeMoveCar(Integer move) {

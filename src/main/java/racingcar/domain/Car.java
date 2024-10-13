@@ -1,6 +1,7 @@
 package racingcar.domain;
 
 import racingcar.exception.ExceptionMessage;
+import racingcar.util.Number;
 
 public class Car {
 
@@ -12,15 +13,15 @@ public class Car {
             throw new IllegalArgumentException(ExceptionMessage.CAR_NAME_EXCEPTION.getMessage());
         }
         this.carName = carName;
-        this.advance = 0;
+        this.advance = Number.magicNumber(Number.ZERO);
     }
 
     public boolean checkCarName5Limit(String carName) {
-        return carName == null || carName.length() > 5;
+        return carName == null || carName.length() > Number.magicNumber(Number.FIVE);
     }
 
     public void addAdvance() {
-        this.advance = advance + 1;
+        this.advance = advance + Number.magicNumber(Number.ONE);
     }
 
     public String getCarName() {
